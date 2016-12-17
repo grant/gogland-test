@@ -1,1 +1,1 @@
-web: gogland-test
+web: ./gogland-test
