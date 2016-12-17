@@ -1,7 +1,24 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "net/http"
+  "os"
+)
 
 func main() {
-	fmt.Printf("hello, world\n")
+  http.HandleFunc("/", hello)
+  port := os.Getenv("PORT")
+  if port == "" {
+    port = "5000"
+  }
+  fmt.Println("listening", port)
+  err := http.ListenAndServe(":5000", nil)
+  if err != nil {
+    panic(err)
+  }
+}
+
+func hello(res http.ResponseWriter, req *http.Request) {
+  fmt.Fprintln(res, "hello, world")
 }
