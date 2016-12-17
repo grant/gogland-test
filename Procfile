@@ -1,1 +1,1 @@
-web: go run hello.go
+web: gogland-test
