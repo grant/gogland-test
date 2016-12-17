@@ -1,0 +1,6 @@
+{
+  "name": "Gogland test",
+  "description": "Testing an example server in Go written in Gogland for deploying on Heroku",
+  "keywords": [],
+  "image": "heroku/go:1.6",
+}
