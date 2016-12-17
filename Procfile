@@ -1,1 +1,1 @@
-web: ./gogland-test
+web: go build && ./gogland-test
